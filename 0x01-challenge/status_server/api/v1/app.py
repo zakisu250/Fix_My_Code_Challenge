@@ -8,9 +8,6 @@ from flask import Flask, jsonify, make_response
 app = Flask(__name__)
 app.register_blueprint(app_views)
 
-@app.route("/status", methods=["GET"])
-def display_status():
-    return app_views
 
 @app.errorhandler(404)
 def not_found(error):
